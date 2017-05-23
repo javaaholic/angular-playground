@@ -1,4 +1,14 @@
+<md-toolbar>My App</md-toolbar>
 <h1>
   {{title}}
 </h1>
 <button md-button>클릭!</button>
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item> Settings </button>
+  <button md-menu-item> Help </button>
+</md-menu>
+
+
+<button md-icon-button [mdMenuTriggerFor]="appMenu">
+   <md-icon svgIcon="thumbs-up">home</md-icon>
+</button>
