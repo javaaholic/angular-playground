@@ -1,5 +1,22 @@
-<app-site-header></app-site-header>
-<app-sidebar></app-sidebar>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<md-sidenav-container class="App-container">
+  <md-toolbar color="primary">
+    <span>앵귤러 MD 연습</span>
+    <span class="Toolbar-button">
+      <button md-icon-button (click)="sidenav.open()">
+        <md-icon>menu</md-icon>
+      </button>
+    </span>
+  </md-toolbar>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <md-sidenav #sidenav class="App-sidenav">
+    <nav class="Sidenav" (click)="sidenav.close()">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+        class="Sidenav-link">홈</a>
+      <a routerLink="/button" routerLinkActive="active" class="Sidenav-link">버튼</a>
+    </nav>
+  </md-sidenav>
+</md-sidenav-container>

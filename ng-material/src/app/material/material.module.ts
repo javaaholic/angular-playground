@@ -5,6 +5,7 @@ import {
   MdMenuModule,
   MdIconModule,
   MdIconRegistry,
+  MdSidenavModule,
 } from '@angular/material';
 
 @NgModule({
@@ -13,6 +14,7 @@ import {
     MdToolbarModule,
     MdMenuModule,
     MdIconModule,
+    MdSidenavModule,
   ],
   providers: [MdIconRegistry],
   declarations: []

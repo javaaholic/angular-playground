@@ -8,8 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
-import { SiteHeaderComponent } from './site-header/site-header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { IndexComponent } from './router-outlet/index/index.component';
 import { ButtonPageComponent } from './router-outlet/button-page/button-page.component';
@@ -17,8 +15,6 @@ import { ButtonPageComponent } from './router-outlet/button-page/button-page.com
 @NgModule({
   declarations: [
     AppComponent,
-    SiteHeaderComponent,
-    SidebarComponent,
     IndexComponent,
     ButtonPageComponent,
   ],
