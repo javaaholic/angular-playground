@@ -38,3 +38,19 @@
   color: #fff;
   background: #1976D2;
 }
+
+.RouterPage {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 56px);
+}
+
+@media screen and (min-width: 601px) {
+  .RouterPage {
+    height: calc(100% - 64px);
+  }
+}
+
+.RouterPage-section {
+  flex: 1;
+}
