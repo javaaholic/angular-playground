@@ -1,19 +1,17 @@
-<md-sidenav-container class="App-container">
-  <md-toolbar color="primary">
-    <span>앵귤러 MD 연습</span>
-    <span class="Toolbar-button">
-      <button md-icon-button (click)="sidenav.open()">
-        <md-icon>menu</md-icon>
-      </button>
-    </span>
-  </md-toolbar>
-
-  <main class="RouterPage">
-    <section class="RouterPage-section">
+<md-sidenav-container class="App">
+  <main class="App-body">
+    <md-toolbar color="primary" class="Toolbar">
+      <span>앵귤러 MD 연습</span>
+      <span class="Toolbar-button">
+        <button md-icon-button (click)="sidenav.open()">
+          <md-icon>menu</md-icon>
+        </button>
+      </span>
+    </md-toolbar>
+    <section class="App-body-router">
       <router-outlet></router-outlet>
     </section>
   </main>
-
   <md-sidenav #sidenav class="App-sidenav">
     <nav class="Sidenav" (click)="sidenav.close()">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
