@@ -129,7 +129,7 @@ describe('#toggleTodoComplete(todo)', () => {
       const todo = new Todo({title: '안녕', complete: false});
       service.addTodo(todo);
 
-      const updatedTodo = service.toggleTodoComplete(todo);
-      expect(updatedTodo.complete).toBe(true);
+      expect(service.toggleTodoComplete(todo).complete).toBe(true);
+      expect(service.toggleTodoComplete(todo).complete).toBe(false);
     }));
 });
