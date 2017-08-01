@@ -9,7 +9,6 @@ export class ButtonPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

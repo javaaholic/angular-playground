@@ -5,17 +5,17 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './components/material/material.module';
 
 import { AppComponent } from './app.component';
 
-import { IndexComponent } from './router-outlet/index/index.component';
-import { ButtonPageComponent } from './router-outlet/button-page/button-page.component';
+import { IndexPageComponent } from './routes/index-page/index-page.component';
+import { ButtonPageComponent } from './routes/button-page/button-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent,
+    IndexPageComponent,
     ButtonPageComponent,
   ],
   imports: [
