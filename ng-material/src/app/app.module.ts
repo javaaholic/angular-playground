@@ -11,12 +11,18 @@ import { AppComponent } from './app.component';
 
 import { IndexPageComponent } from './routes/index-page/index-page.component';
 import { ButtonPageComponent } from './routes/button-page/button-page.component';
+import { HeaderComponent } from './partials/header/header.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import { SidebarComponent } from './partials/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexPageComponent,
     ButtonPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

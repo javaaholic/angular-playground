@@ -1,0 +1,19 @@
+<md-sidenav #sidenav class="sidenav">
+  <nav class="nav" (click)="close()">
+    <a
+      class="link"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      홈
+    </a>
+    <a
+      class="link"
+      routerLink="/button"
+      routerLinkActive="active"
+    >
+      버튼
+    </a>
+  </nav>
+</md-sidenav>

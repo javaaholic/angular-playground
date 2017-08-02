@@ -1,22 +1,23 @@
-<md-sidenav-container class="App">
-  <main class="App-body">
-    <md-toolbar color="primary" class="Toolbar">
-      <span><a routerLink="/" class="headerLink">앵귤러 MD 연습</a></span>
-      <span class="Toolbar-button">
-        <button md-icon-button (click)="sidenav.open()">
-          <md-icon>menu</md-icon>
-        </button>
-      </span>
-    </md-toolbar>
-    <section class="App-body-router">
+<md-sidenav-container class="container">
+  <main class="main">
+    <app-header
+      (openSidebar)="openSidebar()"
+    >
+    </app-header>
+    <section class="section">
       <router-outlet></router-outlet>
     </section>
+    <app-footer></app-footer>
   </main>
-  <md-sidenav #sidenav class="App-sidenav">
-    <nav class="Sidenav" (click)="sidenav.close()">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        class="Sidenav-link">홈</a>
-      <a routerLink="/button" routerLinkActive="active" class="Sidenav-link">버튼</a>
-    </nav>
-  </md-sidenav>
+  <app-sidebar
+    (liftSidenav)="sidenav = $event"
+    (closeSidebar)="closeSidebar()"
+  >
+  </app-sidebar>
+  <div
+    class="background"
+    [@sidenavState]="sidenavState"
+    (click)="closeSidebar()"
+  >
+  </div>
 </md-sidenav-container>
