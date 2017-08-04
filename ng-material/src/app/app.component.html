@@ -1,23 +1,12 @@
 <md-sidenav-container class="container">
   <main class="main">
-    <app-header
-      (openSidebar)="openSidebar()"
-    >
-    </app-header>
+    <app-header (openSidebar)="sidenav.open()"></app-header>
     <section class="section">
       <router-outlet></router-outlet>
     </section>
     <app-footer></app-footer>
   </main>
-  <app-sidebar
-    (liftSidenav)="sidenav = $event"
-    (closeSidebar)="closeSidebar()"
-  >
-  </app-sidebar>
-  <div
-    class="background"
-    [@sidenavState]="sidenavState"
-    (click)="closeSidebar()"
-  >
-  </div>
+  <md-sidenav #sidenav class="sidenav">
+    <app-sidebar (click)="sidenav.close()"></app-sidebar>
+  </md-sidenav>
 </md-sidenav-container>

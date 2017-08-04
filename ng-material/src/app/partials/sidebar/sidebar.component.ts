@@ -1,5 +1,4 @@
-import { Component, OnInit, EventEmitter, ViewChild, Output } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,16 +7,6 @@ import { MdSidenav } from '@angular/material';
 })
 export class SidebarComponent implements OnInit {
 
-  @ViewChild(MdSidenav) sidenav: MdSidenav;
-  @Output() liftSidenav = new EventEmitter<MdSidenav>();
-  @Output() closeSidebar = new EventEmitter<void>();
-
-  ngOnInit() {
-    this.liftSidenav.emit(this.sidenav);
-  }
-
-  close() {
-    this.closeSidebar.emit();
-  }
+  ngOnInit() { }
 
 }
