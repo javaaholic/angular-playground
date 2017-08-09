@@ -47,8 +47,8 @@
     }
 
     button.delete {
-      float:right;
-      margin-top: 2px;
+      float: right;
+      font-size: .7rem;
       margin-right: .8em;
       background-color: gray !important;
       color:white;
